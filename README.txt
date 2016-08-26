@@ -1,4 +1,4 @@
 Integrantes do grupo:
-  - Beltone Mapute
+  - Beltone Mapute;
   - Custodio Serafim Langa
   
