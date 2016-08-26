@@ -4,7 +4,7 @@
   </head>
   <body>
      <h2>Página	de	conversao</h2>
-     <form action="converter" method="post">
+     <form action="converte" method="post">
          N° ROMANO:<input type="text" name="numeroRomano"><br>
          <input type="submit" value="Converter"><br> 
          Resultado:<input type="text">
