@@ -9,12 +9,13 @@ public class NumerosRomanos implements Numero {
 	private Map<String, Integer> todosNumeros;
 	private String numero;
 
-	public NumerosRomanos(String numero) {
-		this.numero = numero;
+	public NumerosRomanos() {
 		inicializaMap();
 	}
 
-	private Integer retornarNumeroNormal(String romano) {
+	public Integer retornarNumeroNormal(String romano) {
+		this.numero=romano;
+		
 		if (romano != null && !romano.isEmpty()) {
 			romano = romano.toUpperCase();
 			Integer decimal = todosNumeros.get(romano);

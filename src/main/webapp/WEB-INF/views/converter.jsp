@@ -5,9 +5,9 @@
   <body>
      <h2>Página	de	conversao</h2>
      <form action="converter" method="post">
-         N° ROMANO:<input type="text" name="numero"><br>
+         N° ROMANO:<input type="text" name="numeroRomano"><br>
          <input type="submit" value="Converter"><br> 
-         Resultado:<input type="text" name="senha">
+         Resultado:<input type="text">
          
      </form>
   </body>
