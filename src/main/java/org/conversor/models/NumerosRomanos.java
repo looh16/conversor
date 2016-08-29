@@ -27,9 +27,8 @@ public class NumerosRomanos {
 		}
 
 		return numAtual;
-
 	}
-
+	
 	private void validarNumerosRomanos(String romano) {
 		Pattern pattern = Pattern.compile("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 		Matcher matcher = pattern.matcher(romano);
