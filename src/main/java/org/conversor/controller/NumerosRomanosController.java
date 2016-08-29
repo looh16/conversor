@@ -20,7 +20,7 @@ public class NumerosRomanosController {
 	@RequestMapping("/converte")
 	public String teste(String numero) {
 		romano = numero;
-		valor = num.converter(romano);
+		valor = num.retornarNumeroNormal(romano);
 
 		return "redirect:mostraNumero";
 	}
