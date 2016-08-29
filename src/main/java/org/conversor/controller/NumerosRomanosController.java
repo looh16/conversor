@@ -21,7 +21,7 @@ public class NumerosRomanosController {
 	@RequestMapping("/converte")
 	public String teste(String numero) {
 		if (numero != null && !numero.isEmpty()){
-			romano = numero;
+			romano = numero.toUpperCase();
 			valor = num.retornarNumeroNormal(romano);		
 		}else{
 			throw new Excessoes("Invalido");

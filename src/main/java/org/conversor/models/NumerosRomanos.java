@@ -15,8 +15,6 @@ public class NumerosRomanos {
 	public int retornarNumeroNormal(String num) {
 		int numAtual = 0;
 		int numPosterior = 0;
-
-		num = num.toUpperCase();
 		validarNumerosRomanos(num);
 
 		for (int i = num.length() - 1; i >= 0; i--) {
@@ -25,13 +23,13 @@ public class NumerosRomanos {
 				numAtual -= numTemporario;
 			else
 				numAtual += numTemporario;
-				numPosterior = numTemporario;
-			}
+			numPosterior = numTemporario;
+		}
 
 		return numAtual;
 
-		}
-	
+	}
+
 	private void validarNumerosRomanos(String romano) {
 		Pattern pattern = Pattern.compile("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 		Matcher matcher = pattern.matcher(romano);
