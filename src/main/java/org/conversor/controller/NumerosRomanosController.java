@@ -1,5 +1,6 @@
 package org.conversor.controller;
 
+import org.conversor.config.Excessoes;
 import org.conversor.models.NumerosRomanos;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,9 +20,12 @@ public class NumerosRomanosController {
 
 	@RequestMapping("/converte")
 	public String teste(String numero) {
-		romano = numero;
-		valor = num.retornarNumeroNormal(romano);
-
+		if (numero != null && !numero.isEmpty()){
+			romano = numero;
+			valor = num.retornarNumeroNormal(romano);		
+		}else{
+			throw new Excessoes("Invalido");
+		}
 		return "redirect:mostraNumero";
 	}
 

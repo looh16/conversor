@@ -16,25 +16,22 @@ public class NumerosRomanos {
 		int numAtual = 0;
 		int numPosterior = 0;
 
-		if (num != null && !num.isEmpty()) {
-			num = num.toUpperCase();
-			validarNumerosRomanos(num);
+		num = num.toUpperCase();
+		validarNumerosRomanos(num);
 
-			for (int i = num.length() - 1; i >= 0; i--) {
-				int numTemporario = todosNumeros.get(new Character(num.charAt(i)).toString());
-				if (numTemporario < numPosterior)
-					numAtual -= numTemporario;
-				else
-					numAtual += numTemporario;
+		for (int i = num.length() - 1; i >= 0; i--) {
+			int numTemporario = todosNumeros.get(new Character(num.charAt(i)).toString());
+			if (numTemporario < numPosterior)
+				numAtual -= numTemporario;
+			else
+				numAtual += numTemporario;
 				numPosterior = numTemporario;
 			}
 
-			return numAtual;
-		} else {
-			throw new NumberFormatException("Numero nao deve ser vazio");
-		}
-	}
+		return numAtual;
 
+		}
+	
 	private void validarNumerosRomanos(String romano) {
 		Pattern pattern = Pattern.compile("^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
 		Matcher matcher = pattern.matcher(romano);
