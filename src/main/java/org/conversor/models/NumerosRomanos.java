@@ -22,7 +22,7 @@ public class NumerosRomanos {
 			if (numTemporario < numPosterior)
 				numAtual -= numTemporario;
 			else
-				numAtual += numTemporario;
+			numAtual += numTemporario;
 			numPosterior = numTemporario;
 		}
 

@@ -1,12 +1,9 @@
 package org.conversor.config;
 
-import java.util.Properties;
-
 import org.conversor.controller.NumerosRomanosController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 
@@ -23,7 +20,7 @@ public class AppWebConfigurations {
 		
 		return resolver;
 	}
-	@Bean
+	/*@Bean
     public SimpleMappingExceptionResolver createSimpleMappingExceptionResolver() {
       SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
       Properties errorMaps = new Properties();
@@ -33,6 +30,6 @@ public class AppWebConfigurations {
       resolver.setDefaultErrorView("globalerror");
       resolver.setExceptionAttribute("exc");
       return resolver;
-   }
+   }*/
 
 }
